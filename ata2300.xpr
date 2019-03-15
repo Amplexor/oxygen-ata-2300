@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="20.1">
+    <meta>
+        <filters directoryPatterns="" filePatterns="ata2300.xpr" positiveFilePatterns="" showHiddenFiles="false"/>
+        <options/>
+    </meta>
+    <projectTree name="ata2300.xpr">
+        <folder name="Data modules"/>
+        <folder name="Publication modules"/>
+    </projectTree>
+</project>

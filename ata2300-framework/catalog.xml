@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  
+  <rewriteSystem systemIdStartString="http://www.ataebiz.org/ATA_Spec2300_FOML_2017.1_FINAL/Schemas/" rewritePrefix="./Schemas/" />
+  <rewriteURI uriStartString="http://www.ataebiz.org/ATA_Spec2300_FOML_2017.1_FINAL/Schemas/" rewritePrefix="./Schemas/" />
+  
+  <!-- Approval -->
+  <uriSuffix uriSuffix="Approval.xsd" uri="./Schemas/Approval/Approval.xsd"/>
+  <uriSuffix uriSuffix="SubSetHeader.xsd" uri="./Schemas/Approval/SubSetHeader.xsd"/>
+  
+  <!-- DataManagement -->
+  <uriSuffix uriSuffix="AdditionalParameters.xsd" uri="./Schemas/DataManagement/AdditionalParameters.xsd"/>
+  <uriSuffix uriSuffix="ApplicCrossRefTable.xsd" uri="./Schemas/DataManagement/ApplicCrossRefTable.xsd"/>
+  <uriSuffix uriSuffix="CondCrossRefTable.xsd" uri="./Schemas/DataManagement/CondCrossRefTable.xsd"/>
+  <uriSuffix uriSuffix="Container.xsd" uri="./Schemas/DataManagement/Container.xsd"/>
+  <uriSuffix uriSuffix="DataSetStatusList.xsd" uri="./Schemas/DataManagement/DataSetStatusList.xsd"/>
+  <uriSuffix uriSuffix="DmStatus.xsd" uri="./Schemas/DataManagement/DmStatus.xsd"/>
+  <uriSuffix uriSuffix="ExchangePackageStatusList.xsd" uri="./Schemas/DataManagement/ExchangePackageStatusList.xsd"/>
+  <uriSuffix uriSuffix="GlossaryRepository.xsd" uri="./Schemas/DataManagement/GlossaryRepository.xsd"/>
+  <uriSuffix uriSuffix="LinkTargetRepository.xsd" uri="./Schemas/DataManagement/LinkTargetRepository.xsd"/>
+  <uriSuffix uriSuffix="PackageOrganization.xsd" uri="./Schemas/DataManagement/PackageOrganization.xsd"/>
+  <uriSuffix uriSuffix="Pm.xsd" uri="./Schemas/DataManagement/Pm.xsd"/>
+  <uriSuffix uriSuffix="PmStatus.xsd" uri="./Schemas/DataManagement/PmStatus.xsd"/>
+  <uriSuffix uriSuffix="ProductCrossRefTable.xsd" uri="./Schemas/DataManagement/ProductCrossRefTable.xsd"/>
+  <uriSuffix uriSuffix="ProjectRules.xsd" uri="./Schemas/DataManagement/ProjectRules.xsd"/>
+  <uriSuffix uriSuffix="QualifierRepository.xsd" uri="./Schemas/DataManagement/QualifierRepository.xsd"/>
+  
+  <!-- Dispatch -->
+  <uriSuffix uriSuffix="CdlItem.xsd" uri="./Schemas/Dispatch/CdlItem.xsd"/>
+  <uriSuffix uriSuffix="DispatchItem.xsd" uri="./Schemas/Dispatch/DispatchItem.xsd"/>
+  <uriSuffix uriSuffix="DispatchLocator.xsd" uri="./Schemas/Dispatch/DispatchLocator.xsd"/>
+  <uriSuffix uriSuffix="DispatchProcedure.xsd" uri="./Schemas/Dispatch/DispatchProcedure.xsd"/>
+  <uriSuffix uriSuffix="SystemFault.xsd" uri="./Schemas/Dispatch/SystemFault.xsd"/>
+  
+  <!-- General -->
+  <uriSuffix uriSuffix="FrontMatter.xsd" uri="./Schemas/General/FrontMatter.xsd"/>
+  <uriSuffix uriSuffix="SupplementalContent.xsd" uri="./Schemas/General/SupplementalContent.xsd"/>
+  
+  <!-- Limitations -->
+  <uriSuffix uriSuffix="Limitation.xsd" uri="./Schemas/Limitations/Limitation.xsd"/>
+  
+  <!-- Performances -->
+  <uriSuffix uriSuffix="Performance.xsd" uri="./Schemas/Performances/Performance.xsd"/>
+  
+  <!-- Performances -->
+  <uriSuffix uriSuffix="CabinEquipMalfunction.xsd" uri="./Schemas/Procedures/CabinEquipMalfunction.xsd"/>
+  <uriSuffix uriSuffix="FailureConsequences.xsd" uri="./Schemas/Procedures/FailureConsequences.xsd"/>
+  <uriSuffix uriSuffix="NonNormalProcedure.xsd" uri="./Schemas/Procedures/NonNormalProcedure.xsd"/>
+  <uriSuffix uriSuffix="NormalProcedure.xsd" uri="./Schemas/Procedures/NormalProcedure.xsd"/>
+  
+  <!-- Substantiation -->
+  <uriSuffix uriSuffix="Substantiation.xsd" uri="./Schemas/Substantiation/Substantiation.xsd"/>
+  
+  <!-- Systems -->
+  <uriSuffix uriSuffix="Annunciation.xsd" uri="./Schemas/Systems/Annunciation.xsd"/>
+  <uriSuffix uriSuffix="SystemDescription.xsd" uri="./Schemas/Systems/SystemDescription.xsd"/>
+  
+  
+</catalog>

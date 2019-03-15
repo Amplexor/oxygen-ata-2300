@@ -1,0 +1,158 @@
+
+
+/* */
+
+applicCrossRefTable {
+    display: block;
+}
+
+productAttributeList:before {
+    display: block;
+    font-weight: bold;
+    content: "Product attribute list:";
+    text-decoration: underline;
+}
+condCrossRefTableRef:before {
+    display: block;
+    font-weight: bold;
+    content: "Conditional cross reference table (reference to):";
+    text-decoration: underline;
+}
+productCrossRefTableRef:before {
+    display: block;
+    font-weight: bold;
+    content: "Product cross reference table (reference to):";
+    text-decoration: underline;
+}
+productAttributeList, condCrossRefTableRef, productCrossRefTableRef {
+    display: block;
+}
+
+productAttribute {
+    display: block;
+}
+productAttribute:before {
+    content: oxy_textfield(
+          edit, '@id',
+          columns, 20);
+}
+productAttribute > name, condType > name, cond > name {
+   /*display: block; */
+    margin-left:10pt;
+    font-weight: bold;
+}
+productAttribute > displayName {
+    display: block;
+    margin-left:10pt;
+    font-weight: bold;
+    color: green;    
+}
+productAttribute > descr, condType > descr, cond > descr {
+    display: block;
+    margin-left:50pt;    
+}
+productAttribute > enumeration, condType > enumeration {
+    display: block;
+    margin-left:50pt;
+    content: oxy_textfield(
+          edit, '@applicPropertyValues',
+          columns, 40);
+}
+/* condCrossRefTable */
+condCrossRefTable {
+    display: block;
+}
+condCrossRefTable:before {
+    display: block;
+    font-weight: bold;
+    content: "Conditional cross reference table:";
+    text-decoration: underline;
+}
+
+condTypeList:before {
+    content: "Condition types list";
+    display:block;
+}
+
+condTypeList {
+    display:block;
+}
+
+condType {
+    display: block;
+}
+
+condList {
+    content: "Conditions list";
+    display:block;
+}
+
+incorporation:before {
+    content: "Incorporation";
+    display:block;
+}
+incorporation {
+    display:block;
+}
+condIncorporation:before {
+    content: oxy_textfield( 
+         edit, '@condRefId');
+}
+condIncorporation {
+    display: block;
+    
+}
+documentIncorporation {
+    
+}
+incorporationStatus {
+    display: block;
+    content: "Status: " oxy_combobox(
+         edit, '@incorporationStatus',
+         editable, false)
+       " date: (YYYY-MM-DD)"
+       oxy_textfield(edit, '@year')
+       "-"
+       oxy_textfield(edit, '@month')
+       "-"
+       oxy_textfield(edit, '@day');
+}
+
+/* */
+productCrossRefTable {
+    display: block;
+}
+
+referencedApplicGroup, referencedApplicGroupRef {
+    display: block;
+}
+productCrossRefTable {
+    display: block;
+}
+product:before {
+    content: "PRODUCT:";
+    text-decoration: underline;
+    display: block;
+}
+product {
+    display: block;
+    margin-left: 15pt;
+}
+
+assign {
+    display: block;
+    content: "Property" 
+       oxy_textfield(
+          edit, '@applicPropertyIdent',
+          columns, 40)
+       " Type "
+       oxy_textfield(
+          edit, '@applicPropertyType',
+          columns, 40)
+       " Value"
+       oxy_textfield(
+          edit, '@applicPropertyValues',
+          columns, 40)
+    
+    /*applicPropertyIdent="serialno" applicPropertyType="prodattr" applicPropertyValue */
+}

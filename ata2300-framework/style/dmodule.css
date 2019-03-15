@@ -1,0 +1,551 @@
+
+
+/* gestion des tableaux : reprendre ce qui est fait dans Docbook */
+
+@import "prdcrossreftable.css";
+@import "ident-status.css";
+@import "paras.css";
+
+@import "cals_table.css";
+
+@namespace url('http://www.ataebiz.org/XMLSchema');
+
+@namespace oxy url('http://www.oxygenxml.com/extensions/author');
+
+@namespace xlink url('http://www.w3.org/1999/xlink');
+
+
+:root {
+  padding-top: 2em;
+  padding-right: 1em;
+  padding-left: 2em;
+  padding-bottom: 5em;
+}
+@media oxygen AND (min-width: 25cm) {
+  /* A gray background */
+  oxy|document {
+    background-color: #fbfbfb;
+  }
+  /* The white page.*/
+  :root {
+    /* White page */
+    border: 1px solid #c6c6c6;
+    background-color: white;
+    /* Centered*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.25in;
+    margin-bottom: 0.25in;
+    /* Letter */
+    width: 21.59cm;
+    min-height: 10cm;
+    /*27.94cm; would be the letter, but a smaller size avoids large caret jumps*/
+  }
+}
+
+oxy|document {
+	display:block !important;
+	font-family: Arial !important;
+	background-color: white;
+}
+
+oxy|comment {
+    display:none !important;
+}
+
+/* The data module*/
+ 
+dmodule {
+	display:block;
+	font-family: Arial !important;
+	font-size: 10pt;
+	margin:12pt;
+	padding:12pt;
+	border: 1pt solid #AAAAAA;
+
+}
+dmodule:after {
+    display: block;
+    text-align:center;
+    font-weight: bold;
+    border-top: 1pt solid black;
+    border-bottom: 1pt solid black;
+    margin-top: 12pt;
+    content:"- End of data module -";
+}
+
+dmCode {
+    content: "DMC: "
+    attr(modelIdentCode)
+    "-"
+    attr(systemDiffCode)
+    "-"
+    attr(systemCode)
+    "-"
+    attr(subSystemCode)
+    "-"
+    attr(subSubSystemCode)
+    "-"
+    attr(subSubSystemCode)
+    "-"
+    attr(disassyCode)
+    "-"
+    attr(disassyCodeVariant)
+    "-"
+    attr(infoCode)
+    "-"
+    attr(infoCodeVariant)
+    "-"
+    attr(itemLocationCode);
+}
+
+language {
+    /*display: block;*/
+    content: attr(languageIsoCode)
+    "-"
+    attr(countryIsoCode);
+}
+
+issueInfo {
+    display: block;
+    content: "Issue date: " attr(issueDate);
+}
+
+/* Content of the data module */
+dmodule > content:before {
+	display:block; 
+	font-weight: bold;
+	color: blue;
+	content: "Content of the DM:";
+	margin-top: 12pt;
+}
+content {
+    display: block;
+    padding: 5pt;
+}
+
+title {
+    display: block;
+    color: blue;
+}
+
+annunciation:before {
+    display: block;
+    font-weight: bold;
+    content: "Annunciation (level "
+      oxy_combobox( 
+            edit, '@priorityLevel',
+            editable, false)
+      " conveyance "
+      oxy_combobox( 
+            edit, '@conveyance',
+            editable, false)
+      " category "
+      oxy_combobox(
+            edit, '@category',
+            editable, false)
+      ")"
+}
+
+/* Main title  */
+annunciation > title, failureConsequences > title, normalProcedure > title, nonNormalProcedure > title, dispatchProcedure > title, dispatchItem > title,
+cdlItem > title, dispatchLocator > title, systemFault > title, glossaryRepository > title, frontMatter > title, performance > title  {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14pt;
+    padding-top: 6pt;
+    padding-bottom : 6pt;
+}
+
+electronicMessage:before {
+    content:oxy_combobox( 
+            editable, false,
+          edit, '@category')
+    " "
+    oxy_combobox(
+          edit, '@priorityLevel',
+          editable, false);
+}
+electronicMessage {
+    border: 1pt solid black;
+}
+/* alert, memo, message, status, communication, dispatch */
+electronicMessage[category='alert'] {
+    
+}
+/* warning, caution, advisory 
+ * https://en.wikipedia.org/wiki/Electronic_centralised_aircraft_monitor
+ *
+ */
+electronicMessage[priorityLevel="warning"] {
+    color: red;
+}
+electronicMessage[priorityLevel="caution"] {
+    color: orange;
+}
+electronicMessage[priorityLevel="advisory"] {
+    
+}
+
+message {
+    font-weight:bold;
+}
+
+measure[showUnit="true"]:after {
+    content: " " attr(unit);
+    color: maroon;
+}
+measure {
+    color: maroon;
+}
+variableInput {
+    width: 3cm;
+    border: 1pt solid black;
+    /*  contenu??? */
+}
+
+
+
+triggeringConditions:before {
+    display: block;
+    font-weight: bold;
+    content: "Conditions";
+}
+triggeringConditions {
+    display: block;
+}
+
+indications:before {
+    content: "Indications";
+    font-weight: bold;
+    display: block;
+}
+inhibitConditions:before {
+    content: "Inhibit conditions";
+    font-weight: bold;
+    display: block;
+}
+
+deferredProcedures, flightPhaseDeferredProc, action {
+    display: block;
+}
+
+procContent {
+    padding: 0.5cm;
+}
+
+procContent:before {
+    content: "PROCEDURE";
+    display:block;
+}
+
+cautionProc:before {
+    display:block;
+    content: "Caution: ";
+    font-weight: bold;
+    text-align: center;
+    color: red;
+    background-color: #AA9999;
+}
+cautionProc {
+    border: 1pt solid red;
+}
+
+response:before {
+    content: ". . . . . . . . . . . . . . . . . . . . . . . .";
+    font-style: italic;
+}
+
+abbreviation {
+    content: attr(glossaryItemId);
+    color: green;
+}
+externalRef {
+    content: attr(targetRefId);
+    color: blue;
+    text-decoration: underline;
+    -oxy-link:attr(targetRefId);
+}
+exclusiveConditions {
+    border-left: 2pt double red;
+    display: block;
+}
+condition {
+    display: block;
+    border-left: 2pt solid #AAAAAA;
+    margin: 0.5cm;
+}
+condition > caseCond:before {
+    content: "Condition : ";
+}
+condition > caseCond {
+    text-decoration: underline;
+}
+
+caseCondBlock:before {
+    content: "Condition : ";
+}
+caseCondBlock > caseCond:before:not(:first-child) {
+    content: " " oxy_xpath('../@logicalOperator') " ";
+}
+
+caseCondBlock > caseCond {
+    text-decoration: underline;
+}
+endOfProc {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    content: "----- End of procedure -----";
+}
+/* GlossaryRepository */
+
+glossaryRepository > title {
+    text-align: center;
+    font-weight: bold;
+}
+glossaryRepository {
+    display: block;
+}
+
+glossaryItem {
+    display: block;
+}
+
+glossaryItem > term {
+    display: block;
+    font-weight: bold;
+    margin-left:  10pt;
+}
+glossaryItem > definition {
+    display: block;
+    font-style: italic;
+    margin-left:  50pt;
+}
+
+/* QualifierRepository */
+qualifierRepository {
+    
+    
+}
+qualifier {
+    display: block;
+    
+}
+qualifier > name{
+    display: block;
+    font-weight: bold;
+    margin-left:  10pt;
+    
+}
+qualifier > description {
+    display: block;
+    font-style: italic;
+    margin-left:  50pt;
+}
+qualifier > localValue {
+    display: block;
+    font-family: monospace;
+    margin-left:  50pt;
+}
+
+/* DispatchLocator */
+dispatchLocator > title {
+    text-align: center;
+    font-weight: bold;
+
+}
+
+/* ------- Common ------- */
+subLevel {
+    display: block;
+    padding:6pt;
+    padding-left: 12pt;
+}
+
+
+techLabel {
+    font-family: courier, fixed, monospace;
+}
+
+oProcedureRef:before {
+    content: "Operational procedure reference: ";
+}
+oProcedureRef {
+    display:block;
+}
+
+mProcedureRef:before {
+    content: "Maintenance procedure reference: ";
+}
+mProcedureRef {
+    display:block;
+}
+
+dmRef {
+    display:inline;
+    font-style: italic;
+}
+linktext {
+    color: blue;
+    text-decoration: underline;
+    display:inline;
+}
+dmRef > dmRefIdent:before {
+    content: "(";
+}
+dmRef > dmRefIdent:after {
+    content: ")";
+}
+dmRef > dmRefIdent {
+    -oxy-foldable: true;
+    -oxy-folded: true;
+    display:inline!important;
+}
+dmRefIdent > * {
+    display:inline;
+}
+
+perfValue {
+    display: block;
+}
+perfValue > value:before {
+    content: ". . . . . . . . . . . . . . . . . . . . . . . .";
+    font-style: italic;
+}
+action > challengeResponse:before {
+    content: "► ";
+    width: 1cm;
+
+}
+command:before {
+    content: "► ";
+    width: 1cm;
+}
+command > para:first-child {
+    display: inline!important;
+}
+land:before {
+    content: "► ";
+    width: 1cm;    
+}
+land {
+    content: "LAND " attr(when);
+    text-transform: uppercase;
+}
+action > timeAction {
+    content: "► ";
+    width: 1cm;        
+}
+timeAction {
+    -oxy-prepend-content: "tictac";
+}
+
+simultaneousActions {
+    display: block;
+    padding: 2mm;
+    margin: 2mm;
+    border-left: 2pt double green;
+}
+
+simultaneousStep:nth-child(1) {
+    background-color: #9CB4DB;
+    }
+simultaneousStep:nth-child(2) {
+    background-color: #CAD5EA;
+}
+
+/* CDL */
+
+cdlItem:before {
+    content: "Number installed: "
+      oxy_textfield(
+          edit, '@numberInstalled')
+}
+dispatchCondition:before {
+    content: "Repair interval: "
+        oxy_combobox( 
+            edit, '@repairInterval',
+            editable, false);
+}
+normalDispatchCondition:before {
+    content: "Number required"
+       oxy_textfield(
+          edit, '@numberRequired');
+}
+
+cdlItem > title {
+    font-weight: bold;
+    text-align: center;
+}
+proviso:before {
+    content: "PROVISO";
+    margin-left:0pt;
+    font-weight: bold;
+}
+normalDispatchCondition > *, proviso > *, cdlPerformance > * {
+    margin-left: 12pt;
+    
+}
+proviso {
+    display: block;
+}
+cdlPerformance:before {
+    content: "CDL performance";
+    font-weight: bold;
+}
+cdlPerformance {
+    display: block;
+}
+
+inopItem {
+    display: block;
+}
+
+inopItem > name {
+    width: 9cm;
+}
+inopItem > consequence:before {
+    content: "";
+    font-family: "Symbol";
+    width: 1cm;
+}
+
+
+/** ############ PM ############## **/
+pm {
+	display:block;
+	font-family: Arial !important;
+	font-size: 10pt;
+}
+pm:after {
+    display: block;
+    text-align:center;
+    font-weight: bold;
+    border-top: 1pt solid black;
+    border-bottom: 1pt solid black;
+    margin-top: 12pt;
+    content:"- End of publication module -";
+}
+pm > content:before {
+	display:block; 
+	font-weight: bold;
+	color: blue;
+	content: "Content of the PM:";
+	margin-top: 12pt;
+}
+
+pmEntry, dmRefGroup {
+    margin-left: 10pt;
+    display: block;
+}
+pmEntry > dmRefGroup > dmRef {
+    display: block;
+}
+pmEntry > title, dmRefGroup > title {
+    font-weight: bold;
+    margin-top: 6pt;
+    margin-bottom: 6pt;
+}
+
+

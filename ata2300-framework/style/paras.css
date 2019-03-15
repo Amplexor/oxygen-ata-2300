@@ -1,0 +1,108 @@
+
+
+/* Warning, caution, notes, remarks, comments, lists, paragraphs  */
+
+
+para {
+    display: block;
+}
+seqList {
+    display: block;
+    margin-left:12pt;
+}
+
+listItem {
+    display: list-item;
+    
+}
+
+
+/* Common attributes */
+note, remark, warning, caution, comment {
+    display:block;
+    padding: 2mm;
+    margin: 2mm;
+}
+
+warning:before {
+    content: "Warning: ";
+    display: block;
+    text-decoration: underline;
+    font-weight:bold;
+}
+warning {
+    font-weight: bold;
+    color: red;
+}
+caution:before {
+    content: "Caution: ";
+    display: block;
+    text-decoration: underline;
+}
+caution {
+    color: red;
+}
+
+note:before {
+    font-weight: bold;
+    text-decoration: underline;
+    content: "NOTE:";
+}
+note {
+    border:1pt solid black;
+    display: block;
+
+}
+
+remark:before {
+    display:block;
+    font-weight: bold;
+    text-decoration: underline;
+    content: "REMARK:";
+}
+comment {
+    border-left: 2pt dashed black;
+}
+
+comment:before {
+    display:block;
+    font-weight: bold;
+    text-decoration: underline;
+    content: "Comment:";
+}
+comment {
+    border-left: 2pt solid black;
+}
+
+emphasis[bold="true"] {
+    font-weight: bold;
+}
+emphasis[italic="true"] {
+    font-style: italic;
+}
+emphasis[underline="true"] {
+    text-decoration: underline;
+}
+emphasis[strikeout="true"] {
+   text-decoration:line-through;
+}
+emphasis[case="lower"] {
+    text-transform: lowercase;
+}
+emphasis[case="upper"] {
+    text-transform: uppercase;
+}
+emphasis[script="sub"] {
+    /* TODO */
+}
+emphasis[script="super"] {
+    /* TODO */
+}
+emphasis[color] {
+    /* TODO */
+}
+emphasis[bgcolor] {
+    /* TODO */
+}
+
+

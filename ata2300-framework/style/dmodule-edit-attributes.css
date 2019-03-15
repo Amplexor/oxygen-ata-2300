@@ -1,0 +1,66 @@
+
+/* 
+ * Stylesheet to allow authoring of:
+ *   - identExtension
+ *   - dmCode
+ *   - pmCode
+ *   - language
+ *   - issueInfo
+ * 
+ */
+
+identExtension {
+    content: "Extension producer: " 
+       oxy_textfield(
+          edit, '@extensionProducer',
+          columns, 20)
+       "Extension code: "
+       oxy_textfield(
+          edit, '@extensionCode',
+          columns, 20);
+    display: block;
+}
+
+
+
+dmCode {
+    content: "DMC: "
+    oxy_textfield(edit, '@modelIdentCode', 'tooltip', 'Model identification')
+    "-"
+    oxy_textfield(edit, '@systemDiffCode', 'tooltip', 'System diff')
+    "-"
+    oxy_textfield(edit, '@systemCode', 'tooltip', 'System')
+    "-"
+    oxy_textfield(edit, '@subSystemCode', 'tooltip', 'Sub-system')
+    "-"
+    oxy_textfield(edit, '@subSubSystemCode', 'tooltip', 'Sub-sub-system')
+    "-"
+    oxy_textfield(edit, '@subSubSystemCode', 'tooltip', 'Sub-sub-sub-system')
+    "-"
+    oxy_textfield(edit, '@disassyCode', 'tooltip', 'Diasssembly')
+    "-"
+    oxy_textfield(edit, '@disassyCodeVariant', 'tooltip', 'Disassembly variant')
+    "-"
+    oxy_textfield(edit, '@infoCode', 'tooltip', 'Info code')
+    "-"
+    oxy_textfield(edit, '@infoCodeVariant', 'tooltip', 'Info variant')
+    "-"
+    oxy_textfield(edit, '@itemLocationCode', 'tooltip', 'Item location');
+}
+
+language {
+    /*display: block;*/
+    content: oxy_textfield(
+          edit, '@languageIsoCode',
+          values, 'en, fr, de, es', 
+          'tooltip', 'Language ISO code')
+    "-"
+    oxy_textfield(
+          edit, '@countryIsoCode', 
+          'tooltip', 'country ISO code');
+}
+
+issueInfo {
+    display: block;
+    content: "Issue date: " oxy_datePicker(edit, 'issueDate');
+}

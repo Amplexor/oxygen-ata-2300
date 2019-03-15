@@ -1,0 +1,93 @@
+
+
+/* Ident */
+/* First part: identification information */
+
+dmIdent:before {
+    content: "Identification of the DM";
+    font-weight: bold;
+    display: block;
+    text-decoration: underline;
+}
+dmIdent {
+    display: block;
+    margin: 12pt;
+    padding: 12pt;
+    border: 2pt solid lightblue;
+}
+
+dmIdent > identExtension:before {
+    content: "Identication extension:";
+    font-weight: bold;
+    display: block;
+}
+identExtension {
+    content: "Extension producer: " 
+       attr(extensionProducer)
+       "-"
+       attr(extensionCode);
+}
+
+
+pmIdent:before {
+    content: "Identification of the PM";
+    font-weight: bold;
+    display: block;
+    text-decoration: underline;
+}
+pmIdent {
+    display: block;
+    margin: 12pt;
+    padding: 12pt;
+    border: 2pt solid lightblue;
+}
+
+pmCode {
+    content: "PMC: "
+    oxy_textfield(edit, '@modelIdentCode', 'tooltip', 'Model identification')
+    "-"
+    oxy_textfield(edit, '@pmIssuer', 'tooltip', 'Issuer')
+    "-"
+    oxy_textfield(edit, '@pmNumber', 'tooltip', 'PM Number')
+    "-"
+    oxy_textfield(edit, '@pmVolume', 'tooltip', 'Volume');
+}
+
+
+/* ################ dmStatus, pmStatus ############## */
+
+dmStatus, pmStatus {
+    display:block;
+	font-family: Arial !important;
+	font-size: 10pt;
+	margin:12pt;
+	padding:12pt;
+    border: 1pt solid #666666;
+	background-color: #DCF0F8;
+}
+
+dmContentIssueInfo {
+    display: block;
+    content: "Content issue date: " oxy_datePicker(
+          edit, '@issueDate',
+          columns, 16);
+/*  ,format, 'yyyy-MM-dd' */
+    
+}
+
+approvalInfo:before {
+    content: "Approval information, required: " oxy_combobox( 
+            edit, '@approvalRequired',
+            editable, false);
+}
+approvalInfo {
+    
+}
+
+dmStatus > applic:before {
+    content: "Applicability:";
+    
+}
+dmStatus > applic {
+    display:block;
+}
