@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmStatus dataProducer="oem" issueType="unchanged" xmlns="http://www.ataebiz.org/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ataebiz.org/XMLSchema DataManagement/DmStatus.xsd">
+	<dmIdent>
+		<identExtension extensionProducer="" extensionCode=""/>
+		<dmCode modelIdentCode="" systemDiffCode="A" systemCode="" subSystemCode="" subSubSystemCode="" assyCode="" disassyCode="" disassyCodeVariant="" infoCode="" infoCodeVariant="" itemLocationCode=""/>
+		<language countryIsoCode="US" languageIsoCode="en"/>
+	</dmIdent>
+	<issueInfo issueDate=""/>
+	<dmContentIssueInfo issueDate=""/>
+	<approvalInfo approvalRequired="no"/>
+	<applic id="app-001">
+		<displayText>
+			<simplePara>ALL</simplePara>
+		</displayText>
+		<assert applicPropertyIdent="" applicPropertyType="" applicPropertyValues=""/>
+	</applic>
+</dmStatus>

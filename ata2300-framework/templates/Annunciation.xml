@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================================================
+Sample Data:
+
+This XML data sample is provided solely to illustrate intended application of the specification and is not intended for operational use. 
+This sample conforms with the schema, "Schemas/Systems/Annunciation.xsd" in ATA Spec 2300 revision 2017.1.  
+
+Limitations of Liability: 
+
+1.  This material is provided "As Is" and neither Air Transport Association of America, Inc. (ATA) 
+    nor any person who has contributed to the creation, revision or maintenance of the material 
+    makes any representations or warranties, express or implied, including but not limited to, 
+    warranties of merchantability or fitness for any particular purpose. 
+
+2.  Neither ATA nor any person who has contributed to the creation, revision or maintenance of 
+    this material shall be liable for any direct, indirect, special or consequential damages or 
+    any other liability arising from any use of this material. 
+
+3.  Revisions to this document may occur after its issuance. The user is responsible for determining 
+    if revisions to the material contained in this document have occurred and are applicable. 
+
+Copyright 2017 - Air Transport Association of America, Inc. d/b/a Airlines for America. All rights reserved.
+
+================================================================= -->
+<dmodule xmlns="http://www.ataebiz.org/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ataebiz.org/XMLSchema ../../../Schemas/Systems/Annunciation.xsd">
+	<dmIdent>
+		<identExtension extensionProducer="ABBE" extensionCode="TRIM_AIR_Annunciation"/>
+		<dmCode modelIdentCode="ABBE2300" systemDiffCode="A" systemCode="21" subSystemCode="0" subSubSystemCode="0" assyCode="02"  disassyCode="00" disassyCodeVariant="A" infoCode="11E" infoCodeVariant="A" itemLocationCode="A"/>
+		<language countryIsoCode="US" languageIsoCode="en"/>
+	</dmIdent>
+	<issueInfo issueDate="2017-03-01T00:00:00Z"/>
+	<!-- ================================================================
+The following XML fragment represents the Annunciation portion of a Non-Normal Checklist.  There is an additional XML fragment for the content of the checklist.
+================================================================= -->
+	<content>
+		<!-- kwd:SystemDesc.Annunciation --><annunciation priorityLevel="advisory" conveyance="message">
+			<title><electronicMessage category="alert" priorityLevel="advisory"><message>TRIM AIR</message></electronicMessage></title>
+			<triggeringConditions>
+				<para>The trim air valve is closed.</para>
+			</triggeringConditions>
+		</annunciation>
+	</content>
+</dmodule>

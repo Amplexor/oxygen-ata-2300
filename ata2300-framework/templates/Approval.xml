@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmodule xmlns="http://www.ataebiz.org/XMLSchema" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ataebiz.org/XMLSchema Approval/Approval.xsd">
+	<dmIdent>
+		<identExtension extensionProducer="" extensionCode=""/>
+		<dmCode modelIdentCode="" systemDiffCode="A" systemCode="" subSystemCode="" subSubSystemCode="" assyCode="" disassyCode="" disassyCodeVariant="" infoCode="" infoCodeVariant="" itemLocationCode=""/>
+		<language countryIsoCode="US" languageIsoCode="en"/>
+	</dmIdent>
+	<issueInfo issueDate=""/>
+	<content>
+		<approval>
+			<title></title>
+			<approvalData>
+				<authority></authority>
+				<approvalDate></approvalDate>
+				<approvalReference></approvalReference>
+				<approvedBy></approvedBy>
+			</approvalData>
+		</approval>
+	</content>
+</dmodule>

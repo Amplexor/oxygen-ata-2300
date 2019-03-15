@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmodule xmlns="http://www.ataebiz.org/XMLSchema" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ataebiz.org/XMLSchema Limitations/Limitation.xsd">
+	<dmIdent>
+		<identExtension extensionProducer="" extensionCode=""/>
+		<dmCode modelIdentCode="" systemDiffCode="A" systemCode="" subSystemCode="" subSubSystemCode="" assyCode="" disassyCode="" disassyCodeVariant="" infoCode="" infoCodeVariant="" itemLocationCode=""/>
+		<language countryIsoCode="US" languageIsoCode="en"/>
+	</dmIdent>
+	<issueInfo issueDate=""/>
+	<content>
+		<limitation>
+			<title>{title}</title>
+			<limitContent>
+				
+			</limitContent>
+		</limitation>
+	</content>
+</dmodule>
