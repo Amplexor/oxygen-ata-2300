@@ -144,7 +144,7 @@ annunciation:before {
       oxy_combobox(
             edit, '@category',
             editable, false)
-      ")"
+      ")";
 }
 
 /* Main title  */

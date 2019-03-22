@@ -86,6 +86,9 @@ emphasis[underline="true"] {
 emphasis[strikeout="true"] {
    text-decoration:line-through;
 }
+emphasis[overline="true"] {
+   text-decoration: overline;
+}
 emphasis[case="lower"] {
     text-transform: lowercase;
 }
@@ -93,16 +96,18 @@ emphasis[case="upper"] {
     text-transform: uppercase;
 }
 emphasis[script="sub"] {
-    /* TODO */
+    vertical-align: sub;
+    font-size: 80%;
 }
 emphasis[script="super"] {
-    /* TODO */
+    vertical-align: super;
+    font-size: 80%;
 }
 emphasis[color] {
-    /* TODO */
+    color: attr(color);
 }
-emphasis[bgcolor] {
-    /* TODO */
+emphasis[bgColor] {
+    background-color: attr(bgColor);
 }
 
 
