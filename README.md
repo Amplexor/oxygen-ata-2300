@@ -1,5 +1,7 @@
 # ATA2300 Information Standards for Flight Operations Data​ Framework for oXygenXML
 
+👋 This repository was migrated to https://github.com/acolad-digital/oxygen-ata-2300
+
 Provides support in oXygen for working with ATA 2300 XML files.
 
 ## What is Information Standards for Flight Operations Data​
